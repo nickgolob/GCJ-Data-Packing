@@ -24,15 +24,6 @@ def seek(discs, data):
                 break         
     return True, j
 
-def seek2(discs, data):
-    discs = sorted(discs)
-    i = 0
-    while (discs[i] < data):
-        i += 1
-        if i == len(discs):
-            return False, None
-    return True, i
-
 def solve(n, x, data):
     data = sorted(data, reverse=True)
     discs = [x - data.pop(0)]
